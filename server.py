@@ -66,6 +66,22 @@ def show_user(user_id):
 
     return render_template("user_details.html", user = user)
 
+@app.route("/login", methods=["POST"])
+def process_login():
+    """Process user login."""
+
+    email = request.form.get("email")
+    password = request.form.get("password")
+
+    user = crud.get_user_by_email(email)
+    if not user or user.password != password:
+        flash("The email or password you entered was incorrect.")
+    else:
+        session["user_email"] = user.email
+        flash(f"Welcome back, {user.email}!")
+
+    return redirect('/')
+
 if __name__ == "__main__":
     connect_to_db(app)
     app.run(host="0.0.0.0", debug=True)
