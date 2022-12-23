@@ -5,8 +5,15 @@
 {% block body %}
 <h1>{{ user.email }}</h1>
 
-<p>
-  User ID: {{ user.user_id }}
-</p>
+<ul>
+  {% for rating in user.ratings %}
+      <li>
+          {{ rating.movie.title }}:
+          <span class=rating_num {{ rating.rating_id }} >
+              {{ rating.score }}
+          </span>
+      </li>
+  {% endfor %}
+</ul>
 
 {% endblock %}
