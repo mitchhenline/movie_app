@@ -1,0 +1,47 @@
+
+#body {
+    background-color: rgba(188, 188, 188, 0.555);
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.poster {
+    height: 600px;
+}
+.movie-title {
+    margin-top: 150px;
+    font-size: 60px;
+}
+
+.flash-msg {
+    background-color:blanchedalmond;
+    color: blue;
+    font-size: 50px;;
+}
+
+.overview {
+    margin: auto;
+    text-align: center;
+    width: 600px;
+    background-color: aliceblue;
+    padding:20px;
+    border-radius: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.rating-box {
+    margin: auto;
+    text-align: center;
+    width: 600px;
+    background-color: aliceblue;
+    padding:20px;
+    border-radius: 30px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+.movie-list {
+    color:black;
+    font-size: 20px;
+}

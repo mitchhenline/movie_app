@@ -1,16 +1,23 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ movie.title }} - Details{% endblock %}
+{% block title %}
+
+{{ movie.title }} - Details{% endblock %}
 
 {% block body %}
-<h1>{{ movie.title }}</h1>
 
-<p>
-  {{ movie.overview }}
+<h1 class="movie-title">{{ movie.title }}</h1>
+
+<p class="overview">
+  <strong>Overview:</strong> {{ movie.overview }}
 </p>
 
+<img class="poster" src="{{ movie.poster_path }}">
+
+
+<div class="rating-box">
 {% if session.get('user_email') %}
-<h2>Rate {{ movie.title }}</h2>
+<h2>Rate "{{ movie.title }}":</h2>
 <form action="/movies/{{ movie.movie_id }}/ratings" method="POST">
   <p>
     Rating:
@@ -24,6 +31,6 @@
   <p><input type="submit"></p>
 </form>
 {% endif %}
+</div>
 
-<img src="{{ movie.poster_path }}">
 {% endblock %}
