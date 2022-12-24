@@ -1,4 +1,8 @@
 
+* {
+    font-family: 'Oswald', sans-serif;
+}
+
 #body {
     background-color: rgba(188, 188, 188, 0.555);
     display: block;
@@ -47,9 +51,23 @@
 }
 
 
-.nav {background-color: rgba(255, 255, 255, 0.598);
+.nav {background-color: rgba(0, 0, 0);
+    color: white;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 60px;
+    height: 80px;
+    position:sticky;
+    top: 0px;
+}
+
+#logo {
+    background-color: yellow;
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.nav-link {
+    color: white;
 }
