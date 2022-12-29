@@ -99,7 +99,7 @@ def create_rating(movie_id):
     rating_score = request.form.get("rating")
 
     if logged_in_email is None:
-        flash("You are not logged in. PLease log in to rate this movie.")
+        flash("You are not logged in. Please log in to rate this movie.")
     elif not rating_score:
         flash("Please select a score for your rating.")
     else:
